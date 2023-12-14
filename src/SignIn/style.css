@@ -1,0 +1,116 @@
+@font-face{
+    font-family: Vaziri;
+    src: url( '../fonts/Vazirmatn[wght].ttf' ) format( 'woff' );
+ }
+
+*{
+    font-family: Vaziri;
+}
+
+  .sign-in-con{
+    width: 600px;
+  }
+  .page-img{
+    background: url('../assets/calendar.png') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.welcome-text{
+    font-size: 40px;
+    font-weight:800 ;
+}
+.addinfo-text{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #818181;
+    font-weight: 400;
+}
+.welcome-texts{
+    margin-top: 100px;
+}
+
+
+
+
+.slider-btn{
+    padding: 14px 70px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #818181;
+    font-weight: 400;
+}
+.toggle-btn{
+    margin-top: 20px;
+}
+
+.btn-con{
+    background-color:#F0F0F2;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.signin-btn{
+    background-color: #ffff;
+    color: black;
+    font-weight: 800;
+    transition: all .5s ;
+}
+
+
+
+.form{
+    margin-top: 30px;
+}
+.form input{
+    border-color: #b8b8b8;
+    height: 50px;
+}
+.form label{
+    color: #818181;
+}
+.form-text{
+    color: #a0a0a0 !important;
+}
+.submit-btn{
+    margin-top: 20px;
+    height: 55px;
+    font-size: 20px !important;
+}
+.input-con:focus-within label {
+    color: rgb(46, 46, 46);
+}
+.captcha-container:focus-within label {
+    color: rgb(46, 46, 46);
+}
+
+.error{
+    font-size: 14px;
+    opacity: 90%;
+    margin-bottom: 40px;
+    color: red !important;
+}
+
+
+
+
+
+#captchaText {
+    display: inline;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#inputCaptcha {
+    display: inline;
+    width: 200px;
+    font-size: 16px;
+    margin-left: 20px;
+
+}
+
+#feedback {
+    margin-top: 10px;
+    color: red !important;
+}
+
