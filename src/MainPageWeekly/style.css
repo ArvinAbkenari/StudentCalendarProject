@@ -92,53 +92,50 @@ body{
 }
 
 
+
 .fa-trash-can{
     color: red;
     font-size: 20px;
 }
 
-.event-con{
-    margin-top: 30px;
+
+
+
+
+/* table */
+
+.table-header{
+    background-color: transparent !important;
+    font-weight: 800;
+    font-size: 20px;
+    border: 2px solid rgb(102, 102, 102) !important;
+    border-radius: 10px;
 }
 
-.event{
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 7px;
-    background-color: white;
-    padding: 5px;
-}
 
-.fa-clock{
-    vertical-align: middle;
-    padding-right: 7px;
-}
-
-.time-con{
-    direction: ltr;
-    color: #6D6D6D;
-    background-color: #f5f5f5;
-    padding: 3px 10px;
-    border-radius:6px;
+.table-d {
     font-weight: 500;
-}
-.time{
-    padding-top: 3px;
     font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 7px 0px rgb(209, 209, 209) !important;
 }
-.fa-chevron-down{
-    color:#6D6D6D ;
-    background-color: #f5f5f5;
-    padding: 9px;
+.table-d:hover{
+    scale: 105%;
+    box-shadow: 0px 0px 10px 5px rgb(209, 209, 209) !important;
+}
+
+table {
+    border-collapse: separate !important;
+    border-spacing: 25px;
+  }
+  
+
+  
+.table-time{
+    font-weight: 500;
     border-radius: 6px;
+    background-color: #F5F5F5;
+    color: #6D6D6D;
 }
-.toggle{
-    rotate: 180deg;
-}
-
-
-
-
-
-
 
