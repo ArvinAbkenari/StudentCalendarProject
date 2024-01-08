@@ -64,6 +64,9 @@ body{
 
 
 /*main*/
+
+
+/* above texts and select option */
 .welcome-texts{
     margin-top: 60px;
 }
@@ -90,8 +93,9 @@ body{
     border: none !important;
     box-shadow: 0px 0px 4px 2px rgba(209, 209, 209, 0.322);
 }
+/* above texts and select option */
 
-
+/* events */
 .fa-trash-can{
     color: red;
     font-size: 20px;
@@ -136,9 +140,102 @@ body{
     rotate: 180deg;
 }
 
+.event-des{
+    color: #6D6D6D !important;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* events */
 
 
+@media only screen and (max-width: 800px) {
+    .welcome-texts{
+        margin-top: 40px;
+    }
+    .welcome-text{
+        font-size: 30px;
+    }
+    .waving-hand{
+        width: 40px;
+        height: 40px;
+    }
+    .date{
+        font-size: 18px;
+    }
+    .select-date{
+        margin-top: 10px;
+        font-size: 18px !important;
+        width: 120px !important;
+        height: 40px;
+    }
+    .fa-trash-can{
+        font-size: 18px;
+    }
+    
+    .event{
+        font-size: 16px;
+    } 
+    .time{
+        padding-top: 3px;
+        font-size: 13px;
+    }
+    .fa-chevron-down{
+        font-size: 15px;
+    } 
+    .event-des{
+        font-size: 14px;
+    }
+    
+  }
 
-
+  @media only screen and (max-width: 500px) {
+    .logo {
+        width: 45px;
+    }
+    .navbar-brand {
+        font-size: 15px !important;
+    }
+    .welcome-texts{
+        margin-top: 30px;
+    }
+    .welcome-text{
+        font-size: 25px;
+    }
+    .waving-hand{
+        width: 35px;
+        height: 35px;
+    }
+    .date{
+        font-size: 15px;
+    }
+    .select-date{
+        font-size: 13px !important;
+        width: 90px !important;
+        height: 30px;
+    }
+    .fa-trash-can{
+        font-size: 15px;
+    }
+    
+    .event{
+        font-size: 14px;
+    } 
+    .time{
+        font-size: 12px;
+    }
+    .fa-chevron-down{
+        font-size: 10px;
+    } 
+    .fa-clock{
+        display: none !important;
+    }
+    .event-des{
+        font-size: 12px;
+    }
+    .nav-item{
+        font-size: 15px;
+    }
+  }
 
 
