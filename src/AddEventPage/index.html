@@ -10,7 +10,7 @@
       integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="static/css/lib/persian-datepicker.min.css">
+    <link rel="stylesheet" href="static/css/lib/persian-datepicker.min.css" />
     <title>Document</title>
   </head>
 
@@ -83,12 +83,13 @@
       <div class="row">
         <div class="col-12 col-lg-6 p-0 pe-lg-5">
           <div class="event-form">
-            <form action="">
+            <form>
               <div class="mb-3">
                 <label for="eventTitleForm" class="form-label"
                   >نام رویداد</label
                 >
                 <input type="text" class="form-control" id="eventTitleForm" />
+                <label class="error mb-2" id="titleError"></label>
               </div>
 
               <div class="row">
@@ -102,6 +103,7 @@
                       class="form-control"
                       id="eventStartTimeForm"
                     />
+                    <label class="error mb-2" id="startTimeError"></label>
                   </div>
                 </div>
                 <div class="col">
@@ -114,6 +116,7 @@
                       class="form-control"
                       id="eventEndTimeForm"
                     />
+                    <label class="error mb-2" id="endTimeError"></label>
                   </div>
                 </div>
               </div>
@@ -129,7 +132,7 @@
                   placeholder="yyyy/mm/dd"
                 />
               </div>
-
+              <label class="error mb-2" id="dateError"></label>
               <div class="mb-3">
                 <label for="eventDesForm" class="form-label"
                   >توضیحات رویداد</label
@@ -144,7 +147,6 @@
                 type="button"
                 class="btn btn-primary w-100 submit-btn"
                 id="submitBtn"
-                onclick="validateForm()"
               >
                 ثبت
               </button>
@@ -152,23 +154,33 @@
           </div>
         </div>
         <div class="col-lg-6 p-0 ps-5 d-none d-lg-block">
-          <div class="events-container d-flex flex-column align-items-center overflow-y-auto overflow-x-hidden">
-            <div class="event-show d-flex justify-content-between">
-              <div class="event-title"> طراحی کامپایلر</div>
-              <div>08:00 - 10:00</div>
-              <div>1402/10/22</div>
-            </div>
-            <div class="event-show d-flex justify-content-between">
-              <div class="event-title"> طراحی کامپایلر</div>
-              <div>08:00 - 10:00</div>
-              <div>1402/10/22</div>
-            </div>
+          <div
+            class="events-container d-flex flex-column align-items-center overflow-y-auto overflow-x-hidden"
+            id="eventContainer"
+          >
           </div>
         </div>
       </div>
     </div>
-
-
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="liveToast"
+        class="toast text-bg-success"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body">رویداد با موفقیت ثبت شد.</div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
 
     <script src="static/js/lib/jquery-3.2.1.min.js"></script>
     <script src="static/js/lib/persian-date.min.js"></script>
@@ -177,12 +189,12 @@
     <script type="text/javascript">
       $(document).ready(function () {
         $(".example1").pDatepicker({
-          format: 'L dddd',
+          format: "L dddd",
           autoClose: true,
           timePicker: {
             enabled: false,
-        },
-        "responsive": true
+          },
+          responsive: true,
         });
       });
     </script>

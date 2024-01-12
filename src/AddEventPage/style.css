@@ -119,6 +119,8 @@ body {
   padding: 20px;
   margin-top: 20px;
   border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 .event-title {
   text-overflow: ellipsis;
@@ -126,6 +128,19 @@ body {
   overflow: hidden;
   width: 140px; /* some width */
 }
+
+.error{
+    font-size: 14px;
+    opacity: 90%;
+    margin-bottom: 40px;
+    color: red !important;
+}
+.toast{
+  font-size: 16px !important;
+  width: 400px !important;
+  height: 50px !important;
+}
+
 
 @media only screen and (max-width: 575px) {
     .logo {
