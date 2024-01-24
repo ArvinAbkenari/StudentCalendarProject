@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous" />
+    <link rel="stylesheet" href="static/css/lib/persian-datepicker.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg header">
+            <div class="container p-0">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/logo.png" class="logo" alt="" />تقویم
+                    دانشجویی</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse tags" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-2 mt-lg-0">
+                        <li class="nav-item ms-lg-2 link">
+                            <a class="nav-link" aria-current="page" href="#">گزارش رویدادها</a>
+                        </li>
+                        <li class="nav-item ms-lg-2 link">
+                            <a class="nav-link active" href="#">ثبت رویدادها</a>
+                        </li>
+                        <li class="nav-item ms-lg-2 link">
+                            <a class="nav-link" href="#">گزارش بازه زمانی</a>
+                        </li>
+                        <li class="nav-item ms-lg-2 link">
+                            <a class="nav-link d-block d-lg-none" href="#">پروفایل کاربری</a>
+                        </li>
+                    </ul>
+                    <a href="" class="profile text-black">
+                        <i class="fa-solid fa-user d-none d-lg-block"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="Main-text">
+            <div class="range-texts d-flex">
+                <h1 class="range-text">بازه زمانی مد نظرت رو انتخاب کن</h1>
+            </div>
+            <div class="top-con d-flex justify-content-between">
+                <div class="date">
+                    <p>امروز، سه‌شنبه 8 آذر 1402</p>
+                </div>
+            </div>
+        </div>
+        <div class=" range-forms mt-1 mt-sm-4">
+            <form class="row flex-column flex-sm-row justify-content-center align-items-center">
+                <div class="col-11 col-sm-5 col-lg-3">
+                    <div class="d-flex flex-column flex-sm-row">
+                        <label for="eventDateForm" class="form-label m-2">از</label>
+                        <input style="direction: ltr" type="text" class="form-control range-from-example"
+                            id="eventDateForm" placeholder="yyyy/mm/dd" />
+                    </div>
+                </div>
+                <div class="col-11 col-sm-5 col-lg-3">
+                    <div class="d-flex flex-column flex-sm-row">
+                        <label for="eventDateForm" class="form-label m-2">تا</label>
+                        <input style="direction: ltr" type="text" class="form-control range-to-example"
+                            id="eventDateForm" placeholder="yyyy/mm/dd" />
+                    </div>
+                </div>
+                <div class="col-11 col-sm-2 col-lg-1 ">
+                    <button type="button" class=" search-btn btn btn-primary p-2  mt-4 mt-sm-0"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="event-con mt-5">
+            <div class="event mb-2">
+              <div class="title-clock-con d-flex justify-content-between">
+                <div class="event-header d-flex align-items-center">
+                  <button class="btn m-0 d-flex">
+                    <i class="fa-regular fa-trash-can"></i>
+                  </button>
+                  <p class="title m-0">کلاس طراحی کامپایلر</p>
+                </div>
+                <div class="event-header d-flex align-items-center">
+                  <div class="time-con d-flex align-items-center">
+                    <div>
+                      <i class="fa-regular fa-clock m-0"></i>
+                    </div>
+                    <p class="time m-0">08:00 - 10:00</p>
+                  </div>
+                  <button
+                    class="btn m-0 d-flex"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample"
+                    onclick="rotateBtn()"
+                  >
+                    <i class="fa-solid fa-chevron-down" id="downBtn"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="collapse" id="collapseExample">
+                <div class="event-des card card-body">
+                  امتحان طراحی کامپایلر از بخش های یک و دو کتاب درسی.
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="static/js/lib/jquery-3.2.1.min.js"></script>
+    <script src="static/js/lib/persian-date.min.js"></script>
+    <script src="static/js/lib/persian-datepicker.min.js"></script>
+    <script src="static/js/app.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var to, from;
+            to = $(".range-to-example").persianDatepicker({
+                inline: false,
+                altField: '.range-to-example-alt',
+                altFormat: 'LLLL',
+                initialValue: false,
+                format: "L dddd",
+                autoClose: true,
+                timePicker: {
+                    enabled: false,
+                },
+                responsive: true,
+                onSelect: function (unix) {
+                    to.touched = true;
+                    if (from && from.options && from.options.maxDate != unix) {
+                        var cachedValue = from.getState().selected.unixDate;
+                        from.options = { maxDate: unix };
+                        if (from.touched) {
+                            from.setDate(cachedValue);
+                        }
+                    }
+                }
+            });
+            from = $(".range-from-example").persianDatepicker({
+                inline: false,
+                altField: '.range-from-example-alt',
+                altFormat: 'LLLL',
+                initialValue: false,
+                format: "L dddd",
+                autoClose: true,
+                timePicker: {
+                    enabled: false,
+                },
+                responsive: true,
+                onSelect: function (unix) {
+                    from.touched = true;
+                    if (to && to.options && to.options.minDate != unix) {
+                        var cachedValue = to.getState().selected.unixDate;
+                        to.options = { minDate: unix };
+                        if (to.touched) {
+                            to.setDate(cachedValue);
+                        }
+                    }
+                }
+            });
+
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/bd1f2aaf1e.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
