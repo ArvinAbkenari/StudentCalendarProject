@@ -1,21 +1,4 @@
 
-const switchWeekly = document.getElementById('flexSwitchCheckDefault')
-const courseAllWeek = document.getElementById('courseAllWeek')
-const courseEachWeek = document.getElementById('courseEachWeek')
-switchWeekly.addEventListener("click", switchy)
-
-function switchy(){
-    if (courseAllWeek.style.display == 'none') {
-        courseAllWeek.style.display = 'block'
-        courseEachWeek.style.display = 'none'
-    }
-    else {
-        courseAllWeek.style.display = 'none'
-        courseEachWeek.style.display = 'block'
-    }
-    
-    
-}
 
 
 
@@ -35,6 +18,8 @@ function validateForm() {
     var courseTitle = document.getElementById('courseTitleForm').value;
     var courseStartTime = document.getElementById('courseStartTimeForm').value;
     var courseEndTime = document.getElementById('courseEndTimeForm').value;
+    var checkboxes = document.querySelectorAll('.course-days input[type="checkbox"]');
+    var radioButtons = document.querySelectorAll('input[name="inlineRadioOptions"]');
     // Reset previous error messages
     resetErrors();
     let isValid = true;
@@ -57,6 +42,18 @@ function validateForm() {
     else if (courseStartTime >= courseEndTime) {
         displayError('startTimeError', 'زمان شروع نمیتواند جلو تر از زمان پایان باشد.');
         isValid = false
+    }
+    var isAnyCheckboxChecked = Array.from(checkboxes).some((checkbox) => checkbox.checked);
+
+    if (!isAnyCheckboxChecked) {
+        displayError('weekDayError', 'حداقل یک روز از هفته را انتخاب کنید.');
+        isValid = false;
+    }
+    var isAnyRadioButtonSelected = Array.from(radioButtons).some((radioButton) => radioButton.checked);
+
+    if (!isAnyRadioButtonSelected) {
+        displayError('semesterError', 'نیم سال تحصیلی را انتخاب کنید.');
+        isValid = false;
     }
 
     if (isValid) {
@@ -104,5 +101,7 @@ function resetErrors() {
     document.getElementById('titleError').innerText = '';
     document.getElementById('startTimeError').innerText = '';
     document.getElementById('endTimeError').innerText = '';
+    document.getElementById('weekDayError').innerText = '';
+    document.getElementById('semesterError').innerText = '';
     // Add more error resets as needed
 }
