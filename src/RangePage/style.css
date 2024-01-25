@@ -80,6 +80,15 @@ label{
     font-size: 17px;
 }
 
+
+
+.title{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 250px;
+}
+
 .fa-trash-can{
     color: red;
     font-size: 20px;
@@ -102,7 +111,8 @@ label{
     padding-right: 7px;
 }
 
-.time-con{
+.time-con,.date-con{
+    margin: 0px 5px;
     direction: ltr;
     color: #6D6D6D;
     background-color: #f5f5f5;
@@ -110,7 +120,7 @@ label{
     border-radius:6px;
     font-weight: 500;
 }
-.time{
+.time,.date-event{
     padding-top: 3px;
     font-size: 16px;
 }
@@ -156,11 +166,14 @@ label{
     .fa-trash-can{
         font-size: 18px;
     }
+    .title{
+        width: 150px;
+    }
     
     .event{
         font-size: 16px;
     } 
-    .time{
+    .time,.date-event{
         padding-top: 3px;
         font-size: 13px;
     }
@@ -196,19 +209,17 @@ label{
     .fa-trash-can{
         font-size: 15px;
     }
-    
+
     .event{
         font-size: 14px;
     } 
-    .time{
+    .time ,.date-event{
         font-size: 12px;
     }
     .fa-chevron-down{
         font-size: 10px;
     } 
-    .fa-clock{
-        display: none !important;
-    }
+
     .event-des{
         font-size: 12px;
     }
@@ -217,5 +228,11 @@ label{
     .search-btn{
         width: 100%;
 
+    }
+    .time-con,.date-con{
+        width: 100%;
+    }
+    .title{
+        width: 300px;
     }
   }
