@@ -52,10 +52,15 @@
           <p>امروز، سه‌شنبه 8 آذر 1402</p>
         </div>
         <div class="select-view">
-          <select class="form-select select-date" aria-label="Default select example">
-            <option selected value="1">روزانه</option>
-            <option value="2">هفتگی</option>
-          </select>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              نمایش
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">روزانه</a></li>
+              <li><a class="dropdown-item active" href="#">هفتگی</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
